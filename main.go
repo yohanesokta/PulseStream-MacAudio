@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	http.Handle("/ffmpeg", new(lib.CountHandler))
+	http.Handle("/ffmpeg", new(lib.FFMPEG_version))
 
 	fs := http.FileServer(http.Dir("./pages"))
 	http.Handle("/", fs)
